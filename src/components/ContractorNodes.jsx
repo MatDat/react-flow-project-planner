@@ -23,7 +23,6 @@ const ContractorNodes = ({ setNodes, setEdges }) => {
         ),
       },
       position: { x: 130, y: index * gap + yOffset },
-      draggable: false,
     }));
 
     const edges = [];
