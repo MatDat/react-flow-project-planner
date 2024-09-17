@@ -1,9 +1,10 @@
 import React from "react";
-import "./css/DayColumns.css";
+import "../DayColumns.css";
 
 const DayColumns = () => {
   return (
     <div className="day-columns">
+      <div className="day-column contractors">Contractors</div>
       <div className="day-column">Monday</div>
       <div className="day-column">Tuesday</div>
       <div className="day-column">Wednesday</div>

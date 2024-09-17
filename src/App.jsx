@@ -1,15 +1,13 @@
 import React, { useCallback } from "react";
-import {
-  ReactFlow,
+import ReactFlow, {
   MiniMap,
   Controls,
   Background,
+  addEdge,
   useNodesState,
   useEdgesState,
-  addEdge,
-} from "@xyflow/react";
-
-import "@xyflow/react/dist/style.css";
+} from "react-flow-renderer";
+import ContractorNodes from "./components/ContractorNodes";
 import DayColumns from "./components/DayColumns";
 
 const initialNodes = [
@@ -36,10 +34,11 @@ export default function App() {
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
       >
-        <Controls />
-        <MiniMap />
-        <Background variant="dots" gap={12} size={1} />
         <DayColumns />
+        <Controls />
+        <MiniMap styling={{ border: "2px solid #7DA1C4" }} />
+        <Background variant="dots" size={0.7} />
+        <ContractorNodes setNodes={setNodes} setEdges={setEdges} />
       </ReactFlow>
     </div>
   );
